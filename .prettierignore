@@ -1,7 +1,6 @@
-temp
-dist
-node_modules
-coverage
 .cache
-samples
 .nyc_output
+coverage
+dist
+generated-*
+node_modules

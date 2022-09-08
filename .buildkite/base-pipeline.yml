@@ -9,11 +9,8 @@ steps:
   - command: ./.buildkite/test.sh
     label: ':jest: :codecov:'
 
+  # This runs the Checkov Terraform Code scanner
+  # https://www.checkov.io/
+  - command: .buildkite/ci-checkov.sh
+    label: ':lock: security - checkov'
   - wait
-
-  - command: ./.buildkite/yarn-run-config.sh publish:go
-    label: ':go: :rocket:'
-    branches: master
-  - command: ./.buildkite/yarn-run-config.sh publish:typescript
-    label: ':typescript: :rocket:'
-    branches: master

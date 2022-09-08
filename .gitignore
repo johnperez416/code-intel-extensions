@@ -1,8 +1,9 @@
-temp
-dist
-node_modules
-coverage
 .cache
-.nyc_output/
+.nyc_output
+coverage
+dist
+generated-*
+node_modules
+
 .eslintcache
 yarn-error.log
